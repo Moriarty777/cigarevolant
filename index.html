@@ -22,7 +22,33 @@
 
 
 		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
 
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+    </script>
 
     </head>
 	<body>
@@ -58,10 +84,10 @@
 					<!-- nav -->
 					<ul class="main-nav nav navbar-nav">
 						<li><a href="#">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Menu</a></li>
-						<li><a href="#">Reservation</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#section2">Menu</a></li>
+						<li><a href="#reservation">Reservation</a></li>
+						<li><a href="#contact">Contact</a></li>
 					</ul>
 					<!-- /nav -->
 
@@ -131,7 +157,7 @@
 
 					<!-- about content -->
 					<div class="col-md-7">
-						<p>Te sit stet labitur veritus, sea similique consetetur ut. Ne fastidii oportere usu. Iusto mediocrem iudicabit ea eos, nemore offendit detraxit ei cum. Oblique conclusionemque qui cu, eum no sonet putant. Eos cu nulla vidisse. Mazim oporteat eam ex, his ei audiam audire, affert corrumpit pri cu.</p>
+						<p>After his venture in radio, Dr.Frasier Crane aims to keep serving Seattle.At Le Cigare Volant , we aim to provide you the best French Cuisine experience everytime. Voted as the best French Restaurant 7 times in a row by Seattle Magazine.  </p>
 					</div>
 					<!-- /about content -->
 
@@ -143,7 +169,7 @@
 							<div class="galery-item">
 
 								<!-- single image -->
-								<div class="galery-img" style="background-image:url(./img/image01.jpg)"></div>
+								<div class="galery-img" style="background-image:url(./img/fr.jpeg)"></div>
 								<!-- /single image -->
 
 							</div>
@@ -153,11 +179,11 @@
 							<div class="galery-item">
 
 								<!-- single image -->
-								<div class="galery-img" style="background-image:url(./img/image02.jpg)"></div>
+								<div class="galery-img" style="background-image:url(./img/egg.jpg)"></div>
 								<!-- /single image -->
 
 								<!-- single image -->
-								<div class="galery-img" style="background-image:url(./img/image03.jpg)"></div>
+								<div class="galery-img" style="background-image:url(./img/cs.jpeg)"></div>
 								<!-- /single image -->
 
 							</div>
@@ -168,17 +194,17 @@
 
 								<div class="item-column">
 									<!-- single image -->
-									<div class="galery-img" style="background-image:url(./img/image04.jpg)"></div>
+									<div class="galery-img" style="background-image:url(./img/rest6.jpeg)"></div>
 									<!-- /single image -->
 
 									<!-- single image -->
-									<div class="galery-img" style="background-image:url(./img/image05.jpg)"></div>
+									<div class="galery-img" style="background-image:url(./img/rest7.jpeg)"></div>
 									<!-- /single image -->
 								</div>
 
 								<div class="item-column">
 									<!-- single image -->
-									<div class="galery-img" style="background-image:url(./img/image06.jpg)"></div>
+									<div class="galery-img" style="background-image:url(./img/rest8.jpeg)"></div>
 									<!-- /single image -->
 
 									<!-- single image -->
@@ -208,11 +234,11 @@
 		<div id="menu" class="section">
 
 			<!-- Backgound Image -->
-			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/background01.jpg)"></div>
+			<div class="bg-image bg-parallax overlay" style="background-image:url(ts.jpeg)"></div>
 			<!-- /Backgound Image -->
 
 			<!-- container -->
-			<div class="container">
+			<div class="container" id="section2">
 
 				<!-- row -->
 				<div class="row">
@@ -225,7 +251,7 @@
 					<!-- menu nav -->
 					<ul class="menu-nav">
 					  <li class="active"><a data-toggle="tab" href="#menu1">Food</a></li>
-					  <li><a data-toggle="tab" href="#menu1">Wine & Drinks</a></li>
+					  <li><a data-toggle="tab" href="#menu1">Wine</a></li>
 
 					</ul>
 					<!-- /menu nav -->
@@ -240,8 +266,8 @@
 								<!-- single dish -->
 								<div class="single-dish">
 									<div class="single-dish-heading">
-										<h4 class="name">Basted Rhubarb Mussels</h4>
-										<h4 class="price">57£</h4>
+										<h4 class="name">Chicken Basquaise</h4>
+										<h4 class="price">37£</h4>
 									</div>
 									<p>te vero tritani iuvaret vis. Nec odio periculis adipiscing an.</p>
 								</div>
@@ -250,8 +276,8 @@
 								<!-- single dish -->
 								<div class="single-dish">
 									<div class="single-dish-heading">
-										<h4 class="name">Steamed Chili Moussaka</h4>
-										<h4 class="price">145£</h4>
+										<h4 class="name">Barigoule of Spring Vegetables</h4>
+										<h4 class="price">25£</h4>
 									</div>
 									<p>te vero tritani iuvaret vis. Nec odio periculis adipiscing an.</p>
 								</div>
@@ -362,7 +388,7 @@
 		<div id="reservation" class="section">
 
 			<!-- Backgound Image -->
-			<div class="bg-image" style="background-image:url(./img/background03.jpg)"></div>
+			<div class="bg-image" style="background-image:url(./img/rest5.jpeg)"></div>
 			<!-- /Backgound Image -->
 
 			<!-- container -->
@@ -443,16 +469,18 @@
 				<!-- row -->
 				<div class="row">
 
+
 					<div class="col-md-5 col-md-offset-7">
 						<div class="section-header">
 							<h4 class="sub-title">Contact Us</h4>
 							<h2 class="title">Get In Touch</h2>
 						</div>
+
 						<div class="contact-content">
-							<p>Te sit stet labitur veritus, sea similique consetetur ut. Ne fastidii oportere usu. Iusto mediocrem iudicabit ea eos, nemore offendit detraxit ei cum.</p>
-							<h3>Tel: <a href="#">045-548-14-97</a></h3>
-							<p>Address: 3685 Granville Lane</p>
-							<p>Email: <a href="#">Risotto@email.com</a></p>
+							<p>For the best French Cuisine experience in the entire City , come on down to Le Cigare Volant.</p>
+							<h3>Tel: <a href="#">98104-4614</a></h3>
+							<p>Address : 201 Yesler, Seattle WA</p>
+							<p>Email: <a href="#">cigarevolant@gmail.com</a></p>
 							<ul class="list-inline">
 								<li><p>Follow Us:</p></li>
 								<li><a href="#"><i class="fa fa-facebook"></i></a></li>

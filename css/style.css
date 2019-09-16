@@ -644,13 +644,13 @@ textarea.input {
 }
 
 #reservation .bg-image  {
-	height:70vh;
+	height: flex;
 }
 
 .reserve-form {
 	padding: 30px 2% 30px;
 	background: rgba(21, 21, 21, 0.9);
-	width : 700px;
+	width : flex;
 }
 
 .reserve-form  .form-group {
